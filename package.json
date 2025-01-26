@@ -1,0 +1,33 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "project-description",
+  "homepage": "https://github.com/user-name/project-repo#readme",
+  "bugs": {
+    "url": "https://github.com/user-name/project-repo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user-name/project-repo.git"
+  },
+  "license": "ISC",
+  "author": "author-name",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
+    "deploy": "git status && git checkout gh-pages && git merge main --no-edit && npm run build && git add dist -f && git commit -m \"Deployment commit\" && git subtree push --prefix dist origin gh-pages && git checkout main"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-merge": "^6.0.1"
+  }
+}
