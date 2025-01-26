@@ -2,7 +2,7 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
-    entry: "./src/index.js",
+    entry: "./src/main.ts",
     output: {
         filename: "app.js",
         path: path.resolve("./dist"),
@@ -16,6 +16,10 @@ export default {
     module: {
         rules: [
             {
+                test: /\.([cm]?ts|tsx)$/,
+                loader: "ts-loader",
+            },
+            {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
@@ -28,5 +32,13 @@ export default {
                 type: "asset/resource",
             },
         ],
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"],
+        extensionAlias: {
+            ".ts": [".js", ".ts"],
+            ".cts": [".cjs", ".cts"],
+            ".mts": [".mjs", ".mts"],
+        },
     },
 };
