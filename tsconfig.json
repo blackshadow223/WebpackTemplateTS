@@ -4,7 +4,7 @@
   "_version": "23.0.0",
 
   "compilerOptions": {
-    "lib": ["ES2024"],
+    "lib": ["ES2024", "DOM", "DOM.Iterable", "WebWorker", "Decorators"],
     "module": "ESNext",
     "target": "ES2024",
 
