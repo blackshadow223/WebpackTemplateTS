@@ -12,7 +12,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
 
     "outDir": "./dist",
     "sourceMap": true,
