@@ -2,6 +2,7 @@ import { defineConfig } from "eslint/config";
 import globals from "globals";
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 
 export default defineConfig([
@@ -36,4 +37,8 @@ export default defineConfig([
   //     },
   //   },
   // },
+
+
+  // Disable rules that may conflict with prettier
+  eslintConfigPrettier,
 ]);
