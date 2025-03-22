@@ -21,12 +21,16 @@
     "deploy": "git status && git checkout gh-pages && git merge main --no-edit && npm run build && git add dist -f && git commit -m \"Deployment commit\" && git subtree push --prefix dist origin gh-pages && git checkout main"
   },
   "devDependencies": {
+    "@eslint/js": "^9.23.0",
     "css-loader": "^7.1.2",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.27.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0",
